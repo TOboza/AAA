@@ -10,14 +10,20 @@ public abstract class Account {
     }
     protected TypeOfAccount typeOfAccount;
 
+    public void openAccount(String name,String surname,String accountNo) {
+        this.name = name;
+        this.surname=surname;
+        this.accountNo= accountNo;
+        this.accountBalance = 0;
+        this.isOpen = true;
+            }
 
-    public void openAccount(){};
     public void remmitance(double income ){
         this.accountBalance += income;
-    };
+    }
     public void paycheck(double withdraw){
         this.accountBalance -= withdraw;
-    };
+    }
     public TypeOfAccount getTypeOfAccount(){
          return typeOfAccount;
      }
